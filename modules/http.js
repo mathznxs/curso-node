@@ -3,10 +3,10 @@ const port = 8080;
 
 const server = http.createServer((req, res) => {
     if (req.url === "/home") {
-        res.writeHead(200, {"Content-type": "text-html"})
+        res.writeHead(200, {"Content-type": "text/html"})
         res.end("<h1>Hello World</h1>");
     }
-    if (req.url === "/users") {
+    else if (req.url === "/users") {
         const users = [
             {
                 name: "John Doe",
