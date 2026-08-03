@@ -3,22 +3,22 @@ const port = 8080;
 
 const server = http.createServer((req, res) => {
     if (req.url === "/home") {
-        res.writeHead(200, {"Content-type": "text/html"})
-        res.end("<h1>Hello World</h1>");
+        res.writeHead(200, {"content-type": "text/html"})
+        res.end("<h1>Hello World!</h1>")
     }
-    else if (req.url === "/users") {
+    if (req.url === "/users") {
         const users = [
             {
                 name: "John Doe",
-                email: "john@doe.com"
+                email: "john@doe"
             },
             {
                 name: "Jane Doe",
-                email: "jane@doe.com"
+                email: "jane@doe"
             }
         ]
         res.writeHead(200, {"content-type": "application/json"})
-        res.end(JSON.stringify(users));
+        res.end(JSON.stringify(users)) 
     }
 })
 

@@ -1,7 +1,11 @@
-// const http = require("./modules/http")
-
+// const path = require ("./modules/path")
 // const fs = require("./modules/fs")
 
-// const path = require("./modules/path")
+// const http = require("./modules/http")
 
-const express = require("./modules/express")
+// require("./modules/express")
+const dotenv = require("dotenv");
+const connectToDatabase = require("./src/database/connect")
+
+dotenv.config();
+connectToDatabase();
